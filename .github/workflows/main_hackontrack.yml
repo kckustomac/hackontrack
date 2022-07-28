@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'hackontrack'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66CE8A5704294A96B28ECC5CB3641717 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_637A9266B7984EFFA8E4E28F57FD5A3E }}
           package: .
