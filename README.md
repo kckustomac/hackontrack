@@ -1,2 +1,0 @@
-# hackontrack
-hack midwest hackathon
