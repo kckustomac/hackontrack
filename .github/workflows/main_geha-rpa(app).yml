@@ -23,7 +23,26 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          npm i -g corepack
+
+          set NODE_TLS_REJECT_UNAUTHORIZED=0
+          npm config set strict-ssl false
+          npm config set registry http://registry.npmjs.org/
+          npm config -g delete ca
+          npm i -g corepack
+          yarn config set "strict-ssl" false
+          yarn init -2
+          npm install -g typescript
+          npm i -g corepack
+          npm install --legacy-peer-deps
+          npm run build --if-present
+          npm run test --if-present
+
           npm install
+          npm run build --if-present
+          npm run test --if-present
+
+      - name: Upload artifact for deployment job
           npm run build --if-present
           npm run test --if-present
 
