@@ -1,0 +1,330 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Delivered-To: jerrodthomaskc@gmail.com
+Received: by 2002:a17:907:75f7:b0:ae3:c9b6:c69f with SMTP id jz23csp3246373ejc;
+        Mon, 11 Aug 2025 09:56:53 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH7kdnj3Iub24j3HSiKeY694YjtL1kCavu7avVdrLFaI8Ck7Eah0O+gqboDC6wuyyGUevL/
+X-Received: by 2002:a17:906:fe41:b0:ae7:cb7:9005 with SMTP id a640c23a62f3a-afa1e102c47mr15045166b.35.1754931413719;
+        Mon, 11 Aug 2025 09:56:53 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1754931413; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=krendSlMPUKNuEBbBgud8xafEo4jCgEKp6ZmsfgJrGSsNHOASQzZbb8n3wl095WKLy
+         1fBwzHYDQ5S7ziQfVO2bnNg4/iVzhyuKFKUE/ZvsvnfV9I/eYwTNePbKsoOSzZXQPMiw
+         r8/RdrM4qvvgYtLm19qgxX4kU34QNN7MErQfaa+RmftAYu0h/RnkNRGBKk0dFgaJ2PIs
+         FOxiqTJkwWIvWfx5dh+YBZFUUoP3fSA2IJPBKblONi94JWvnQC+7coOLo5ppARZElBPP
+         osiYNu1VoOSNI29KXq07Pxgp+pBlM4bmzp0++yRahxYduemuwilTxXeAnmPv8EQQ+DJc
+         NvBg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=obFOYdkDtSHYXILHAYeVNHd2EXIYkF9//xYbjmT74tE=;
+        fh=A9ELPW8S5d/1gAl+KS2+BHf4U5aSVRRKvwh44JHcY5U=;
+        b=kPqUImeFG6mxInjRhcIF+FayOwFrhrtVnFCaSBBzOZjlNdBA+x9hXLGXa2x5ZPnVdj
+         yVgfY4kkv1tDXl422jsPiiXVxhz+LMng2gQ4p8Zdh7o5uTqCyeMNe8uFKwYp3u+/UEou
+         U0saT7aQ6FHrzvgWPWDFUkApsDkmdh+VKJYLaHnAgek5+4hdL19mY+qQfGdWI+w4pNxj
+         ivV2xA4U6DNn86I9oVHwCWIhrVLBKI8yWNsc8Y7+EG5ILuHWFctZRy+uUICj++C9BhQB
+         8/DD1ACa5tOZ0UmnVf6AUS5u3X75CFHDD/JWrNYBOYJaPRZL2S8++ABLQpDwlWW8qQTu
+         uWPQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@lhh.com header.s=selector1 header.b=Yuluj8+f;
+       arc=pass (i=1 spf=pass spfdomain=lhh.com dkim=pass dkdomain=lhh.com dmarc=pass fromdomain=lhh.com);
+       spf=pass (google.com: domain of lhhusrsassociatecare@lhh.com designates 2a01:111:f403:c200::3 as permitted sender) smtp.mailfrom=LHHUSRSAssociatecare@lhh.com;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=lhh.com
+Return-Path: <LHHUSRSAssociatecare@lhh.com>
+Received: from DU2PR03CU002.outbound.protection.outlook.com (mail-northeuropeazlp170110003.outbound.protection.outlook.com. [2a01:111:f403:c200::3])
+        by mx.google.com with ESMTPS id a640c23a62f3a-af9722290f6si1285151366b.741.2025.08.11.09.56.53
+        for <jerrodthomaskc@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 11 Aug 2025 09:56:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of lhhusrsassociatecare@lhh.com designates 2a01:111:f403:c200::3 as permitted sender) client-ip=2a01:111:f403:c200::3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@lhh.com header.s=selector1 header.b=Yuluj8+f;
+       arc=pass (i=1 spf=pass spfdomain=lhh.com dkim=pass dkdomain=lhh.com dmarc=pass fromdomain=lhh.com);
+       spf=pass (google.com: domain of lhhusrsassociatecare@lhh.com designates 2a01:111:f403:c200::3 as permitted sender) smtp.mailfrom=LHHUSRSAssociatecare@lhh.com;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=lhh.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=vfnbsWyY0vGtJuwjxLFshv41S/vRLFGv5+7T1ju28nbQJ5EUxiQcazkqDjNK68F3uFRUfSmVyS5b2FIzpHYomybbZXsUuFQzmtrRS/HBCwxiYZxKk8lHJG+Zy5t/BCzNBVAsLfz2bE92EpPj89ikh98C8m9ChSvWSDKlg2TOdqO+1gAdEMmliQbdTOYxU93jfArhEk5GncKiJHtWepLH4dZSFz2f/hBQo4cJmL6W/2onwirRVTw8mDB3LmqrJvCWAE8pbsyP++Q/utLT7a6iyukwC6xYT98vaCSq3MRzc5frMBZnKTfpIz2wAmMe9pg1FAGZPYe5zzl/nHbcSHxA7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=obFOYdkDtSHYXILHAYeVNHd2EXIYkF9//xYbjmT74tE=;
+ b=e/W5EDvZ0GdOHlqBvuW68Vghm5rfTpeETeSN0KHWq4EUsWtbGNoKEuo7o/vIkNjWnZmovzkIbdwO9QQsEtA90zdO3aZQNDl3m7/Ct6uUzG958HEuikQEOOTy7q0uzXgO9cGz8Zug/zjV/+qQ33Of40nmTxeMcq6wElusmfN4/hZl2HX2Ho1L92Z5wUyipD6yy71XC3koQJRBacaB8+5w+XwZyYFhgiJjgA9RVM/eKszwyTf9UHuudPZUZto9GqJwp0JUv3AKnZQuRkkfEktPfmYtbJdCHwQ7HzmXFIYZVimK0DGmyYTssoGQwgVqwaAJFFxJPhkkb/2h117x3+Zrrw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=lhh.com; dmarc=pass action=none header.from=lhh.com; dkim=pass
+ header.d=lhh.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lhh.com; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=obFOYdkDtSHYXILHAYeVNHd2EXIYkF9//xYbjmT74tE=;
+ b=Yuluj8+fpdD3GI2LpNeJe1lipMQJXSWexyWAgHbmUqX024JyfcbbdJF1QBZhBBAkJktZAT3R5w9ohBR3NBD2lZ8Uweucgf2pj6egFJgLmtiDOsYliD+HzsDf7LBAiPLE7Ld0pYrJ+mibkNsniFXQ84d1n7yDy9xIHJ/9tMJ5peD1/Jb92wF73m0O1MdqqBAG9v/HZKg2BzK2HZwhTI063nHx2Q5rPNtlZxm90jegg0hlS6zTuEEGrJg8xSO9sdEiWL4Lho6nab6BwGfn5NF4lKeIfaElogOiikzNFs7wjmIgdEntLgM5ylT2HgUrTgrkQ9XQeG1Vj9PXrRR+87Dymw==
+Received: from AS8PR06MB8213.eurprd06.prod.outlook.com (2603:10a6:20b:3c6::6)
+ by DB9PR06MB7644.eurprd06.prod.outlook.com (2603:10a6:10:253::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9009.20; Mon, 11 Aug
+ 2025 16:56:50 +0000
+Received: from AS8PR06MB8213.eurprd06.prod.outlook.com
+ ([fe80::5cd1:1e85:1d5f:4cd9]) by AS8PR06MB8213.eurprd06.prod.outlook.com
+ ([fe80::5cd1:1e85:1d5f:4cd9%4]) with mapi id 15.20.9009.017; Mon, 11 Aug 2025
+ 16:56:50 +0000
+From: LHH US RS Associate Care <LHHUSRSAssociatecare@lhh.com>
+To: "jerrodthomaskc@gmail.com" <jerrodthomaskc@gmail.com>
+Subject: REMINDER: PLEASE SUBMIT YOUR TIMECARD! - IL085
+Thread-Topic: REMINDER: PLEASE SUBMIT YOUR TIMECARD! - IL085
+Thread-Index: AQHcCuDSdSd/GdajCEyJSvu/CGTDpA==
+Date: Mon, 11 Aug 2025 16:56:03 +0000
+Message-ID:
+ <AS8PR06MB8213AF335D02CC2BFA3FF52EF628A@AS8PR06MB8213.eurprd06.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-mail-application: Microsoft Power Automate; User-Agent:
+ azure-logic-apps/1.0 (workflow f6646df77f3c4ebd85d23cb8efa60468; version
+ 08584467440389841927) microsoft-flow/1.0
+x-ms-mail-operation-type: Send
+x-ms-mail-environment-id: default-f30ac191-b8b4-45f2-9a9b-e5466cb90c2f
+x-ms-mail-workflow: x-ms-workflow-name: 2f0132d9-121f-4bcd-a22e-702e9512eb26;
+ x-ms-workflow-run-id: 08584466755764171700062282439CU210;
+ x-ms-client-request-id: 6761b8e9-e26d-4cd6-90a9-56ea84d1326e;
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=lhh.com;
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: AS8PR06MB8213:EE_|DB9PR06MB7644:EE_
+x-ms-office365-filtering-correlation-id: 0f72e5c1-c0ba-4abd-be66-08ddd8f8112c
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|69100299015|1800799024|19092799006|366016|376014|8096899003|38070700018;
+x-microsoft-antispam-message-info:
+ =?us-ascii?Q?/qxkEr4GNL46xsYvsjpHH+lxyuNkxLlDXAN9CLv8P8mGUhIOa6d0ihOlj15R?=
+ =?us-ascii?Q?+41A5O/a/b7VkWcEgrWJI6O2eT7RVbt08/CXD8yNOiUSS2H5u98Yefdh19p4?=
+ =?us-ascii?Q?uhKsRuoTXN9fvu7FF+PknJRIPE9aLZ6YleZBPsdo4JJB5mw+lwnop/Sjpshh?=
+ =?us-ascii?Q?jY+auyEgMwVJQM7QD/kOTd97bWb6YoC8knq+nVS6smRd82tPNRe23NfkbFvm?=
+ =?us-ascii?Q?Erg/jXVdNq4cngYWuahiQWqvOm6oL/lMzPoYpIVU6b5DHQtwgjgHO1WCmWpJ?=
+ =?us-ascii?Q?yTWDEJPT2fjWYQrPVhQwOqrqfxbJ+Qf3QMkr5lCO9JKHgVCaNJvK+5kIHTl7?=
+ =?us-ascii?Q?W9diKJ09Y/PRClStZLCDJC2zgfBfNhX+zfZZDp8VOWrhOMA5ofheSt8TXzCm?=
+ =?us-ascii?Q?Nb4EPMKNwg6ZmCHQ/kXV1sCBDpHVRaj4/6rL/SE6YFSR+hvzTnc3+COOHIye?=
+ =?us-ascii?Q?gfh/Cbz+QzgGShwqLeWSx6AYGmxA0L/rwNQO0T7N4Qy3MZQs651PE29LK27x?=
+ =?us-ascii?Q?ey0R9O8Rn+zWVDSYSE7tomFs765EUdWNZUokXvJtLmUjztfx8CgM4PqJdwgA?=
+ =?us-ascii?Q?oWqTvoFNusOIj3LXZqk3yWNx0CjBF8+gOUi1SQv+MvFsonQ8wku4MW9Mbret?=
+ =?us-ascii?Q?08VhBUavwFs0s8PPeug41eGXXjga+7O4clP+4cZAHj/hIWqKROkHIN1dzqBt?=
+ =?us-ascii?Q?gLw796s39fNVqmBCx4Mqs64CkXCmV41r+SZAVKRcLkYhUen/qQdDhBuQ5Zb8?=
+ =?us-ascii?Q?0wO0IXwyNCxw1pIeSqIn2CDkXzqvWhd+RhUM4GIKUIXvevx5sIcKcibHl8gu?=
+ =?us-ascii?Q?EWPfifWvIAQuxnnDs5yGuGnIqL0+RBD+pDSCUU3G8xxWvHnTw7fuAFeiQd0O?=
+ =?us-ascii?Q?MTXIG+SHhqygIktjlgB5ENGrySRUDcfBsp5RL5tPsLLPsiBxjXvOcLQ9jBZw?=
+ =?us-ascii?Q?vS+xZIr9059CD4hV6lfboUAcmCjt5oT55vvwygpLOK4cceqG2/EpcKuVD0T1?=
+ =?us-ascii?Q?wr81xaSzyC2VsrWqEsOrmA6Y/AXAKdDmzS+95vAm89tYmSi7xrqDKFjIuz+x?=
+ =?us-ascii?Q?1i25u3JAgv/Pp8/Xa57/vMSIjU9utv0ovJqiZmKG8J4Ak3nDlbp2YVwaRRxb?=
+ =?us-ascii?Q?NLGTW1uOwM2y613XkcfpJNyi7ucshCtDG7hFIwSIuf2+2LLmFByfZ4qnptxU?=
+ =?us-ascii?Q?yrbdxCAXOY2wufnplBHY+au9jbnyqZTU94WwEmz0E7tA3Gu8kyTyLdJn7201?=
+ =?us-ascii?Q?QBNFs2e43k4+LGeOU+H593f0qUnAi8KaVH5/rGo0MWZegzFumT5/z1YX3J70?=
+ =?us-ascii?Q?wIynmiWlVYvaY6jvkbor7Q/GES7LQUrvAwaQ/OBRTV/LXzJkugOJBy89TNC1?=
+ =?us-ascii?Q?ZqlFPlRO34Fk673wShT2vfkI0hBvHCbqECGumHPCsxa6qTvbwTmRNIT1YbPq?=
+ =?us-ascii?Q?10XoDHA//Ck=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AS8PR06MB8213.eurprd06.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(69100299015)(1800799024)(19092799006)(366016)(376014)(8096899003)(38070700018);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?s6EQCcsz0lXY8VUBHCpQ/9YIbJbX3tUtdJ4fcjjjKs/4ASdYsWIy7nL92kHZ?=
+ =?us-ascii?Q?gENrj8ODCqjusdIaQwOlXYUUE59guDxSk/1ZK2j3rD5ZHjoD3LFell/YQBDD?=
+ =?us-ascii?Q?iHUUqmVuI+8yAIXjVP65bSdCe4mADOJ+kHjG8a9tHRgdQ1/+QGX+2zAmpbhH?=
+ =?us-ascii?Q?3oZ2ydE2fd4AyJTo3gKc3LzhoI9b+ZHc4V1yDwb6N8noQVVVQPFjGdITvgTN?=
+ =?us-ascii?Q?I+v3j8W/tP99Q7NHwqzKRW1yGluY4FU3hO68o14BO7EMJZz/Vfhlp33MFbpS?=
+ =?us-ascii?Q?i3+rqE0D58I1COr2pYtx+C6HVI0hluO6JKzUMeFuNOBtvTR1+uWxAzvi3xY0?=
+ =?us-ascii?Q?EP9lwkaJsp0pCFP3fHIEuY0f3f1Yvp8D7YhIsaDN9+DXknvhOpvZWNoMM2Zm?=
+ =?us-ascii?Q?n81WY+NkheRpUccIvACcj9GuRj5kag5P1hLILq/iLC5Jn/cozw0HfhzP0xfl?=
+ =?us-ascii?Q?DACnUlCZVyc4q4NS65/4ETMR0WvPSwb+n2F07RcydCPkYrbdtZej9pVOlF5T?=
+ =?us-ascii?Q?LwaIbrFrna20isFqxE2CW2SOqXdSVNAcKZtswSBXbfqyXcCcLNFfHKMHi2OC?=
+ =?us-ascii?Q?gqodOpK2w48ge8St+bOdauMvhHgS7oLOf+TJbwEvMe2N3Axy+nTo/oTSUryd?=
+ =?us-ascii?Q?WNAuDr1vi0yeYVNHak7nmimu+9cqbKfAB6QIUWKKVThcHUk75HvLoDVeck0E?=
+ =?us-ascii?Q?W8eTiizXAN1me2k/q1YhJVOobMhSgmaVZxzSHWsrJI1FTP8QZKvC1X/Yp3DE?=
+ =?us-ascii?Q?4B7EdWtsvlERVhLRvUH3C84c8IMPD+PcGKKWY4g/OVTxwe3xK3ycvPrguMNE?=
+ =?us-ascii?Q?/8tLu5OcTP35um5SVoszowAtSiJ4UuSViLVLFvFRTY68EBgkie7gfeILtCWn?=
+ =?us-ascii?Q?HvF21AkUnSJMNLuMH74ISTPUVow+LW8Mc1mR7Zk6qgnLdIE0fuW08RymOSQe?=
+ =?us-ascii?Q?xobaiRoEwxjSAFJ1i+tbpkip2dnFNE6FB1g9qvn1YylRtihD6ScSeP7ZCId8?=
+ =?us-ascii?Q?Qsy+GrIo0K54FYxbHTqzmw9Opjr1WHsLJltX9zU/83dmDKIZMKc3IBQERIgh?=
+ =?us-ascii?Q?bYB5YgSZY/6nWwTzwRZZXAA65keL53mWp60wPiYPefdgPdf5fB0HWYxL/GPG?=
+ =?us-ascii?Q?7JRX7uY/pSfMX0UcR4IlYHBIDuIWtXk08IH49frAtjHTrR4yKaXTdJdPvO5v?=
+ =?us-ascii?Q?8p/jf7Q4uNp8z809qFox3IFWb9wD4U3tXaGZqVINHrIohLnbXtFdYyG7aYO9?=
+ =?us-ascii?Q?LrC1VjyvWtvLNEq8+hUNmnwPCaJDKIFABzrOSi8pVNpGLCLCUyV/1dSbz2z3?=
+ =?us-ascii?Q?y+4x1iUEkXNq3wgLP3OHFcSMjfL/brtLg6xhrTTPD5WSMwb/gw83TxsxGLcV?=
+ =?us-ascii?Q?dlZK0yOJL1uS4rcPjec4hMcVoQfdG7gYbI2PDMmW0xHoPZ8Z5NC+QJGrTdWS?=
+ =?us-ascii?Q?LUkM8EYhdx4GgcWbIKQ6hYhETDFn3su6y2EgjuIWLCRDMUTq0y6rqxjmOruh?=
+ =?us-ascii?Q?eTQsaPGfIK9FIXuuQ1SLJJmsce51RCxXK9YCkNDWwM83Ly5MUacX5Tl6C6oo?=
+ =?us-ascii?Q?C5I/5vIuvix7ZHB5Vn9GWjomwOQL8qTfVrnb+iwc?=
+Content-Type: multipart/alternative;
+	boundary="_000_AS8PR06MB8213AF335D02CC2BFA3FF52EF628AAS8PR06MB8213eurp_"
+MIME-Version: 1.0
+X-OriginatorOrg: lhh.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: AS8PR06MB8213.eurprd06.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0f72e5c1-c0ba-4abd-be66-08ddd8f8112c
+X-MS-Exchange-CrossTenant-originalarrivaltime: 11 Aug 2025 16:56:03.9710
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f30ac191-b8b4-45f2-9a9b-e5466cb90c2f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: jFFoQpiA60Zy3UoYJywIE/Rtnv0LxVXNWxwUsd7OybsZhEogvuT+Twen/uY3+iBCc4+XgW/4DYC73d7FZh7xTw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB9PR06MB7644
+
+--_000_AS8PR06MB8213AF335D02CC2BFA3FF52EF628AAS8PR06MB8213eurp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello,
+
+This is a reminder that your timecard for last week needs to be submitted.
+
+Assignment Number: W01304686-001
+
+Action items:
+
+  *   If you worked last week, please submit your timecard as soon as possi=
+ble so that your payroll may process on time.
+  *   If you are no longer on assignment, please reply to this e-mail and i=
+nclude your last day worked.
+  *   If you are currently on assignment but did not work last week, please=
+ submit "Did Not Work" in Peoplenet (image below).
+[https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/2eae2308-b8=
+06-4bf8-b04a-a8f55cc19e9b/HF-2000073/pnet%20did%20not%20work.png]
+
+If you have any questions or concerns, please contact us at LHHUSRSAssociat=
+ecare@lhh.com and one of our Specialists will be happy to help.
+
+Thank you,
+
+LHH Associate Care Support Team
+
+[https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/2eae2308-b8=
+06-4bf8-b04a-a8f55cc19e9b/HF-2000073/LHH%20Candidate%20App.jfif]
+
+--_000_AS8PR06MB8213AF335D02CC2BFA3FF52EF628AAS8PR06MB8213eurp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body>
+<p><!DOCTYPE html><style>=0A=
+        .survey-box {=0A=
+            background-color: purple;=0A=
+            color: white;=0A=
+            padding: 10px;=0A=
+            border-radius: 5px;=0A=
+            cursor: pointer;=0A=
+            text-decoration: none;=0A=
+        }=0A=
+        .centered-text {=0A=
+            text-align: center;=0A=
+        }=0A=
+        .left-aligned-text {=0A=
+            text-align: left;=0A=
+        }=0A=
+        .centered-image {=0A=
+            display: block;=0A=
+            margin: 0 auto;=0A=
+            max-width: 600px;=0A=
+            height: auto;=0A=
+        }=0A=
+        .outer-column {=0A=
+            width: 20%; /* Adjust width as needed */=0A=
+        }=0A=
+        .middle-column {=0A=
+            width: 60%; /* Adjust width as needed */=0A=
+        }=0A=
+        .underline {=0A=
+            text-decoration: underline;=0A=
+        }=0A=
+        .highlight {=0A=
+            color: #4F185A;=0A=
+            font-weight:bold;=0A=
+        }=0A=
+        .indented-list {=0A=
+            padding-left:40px;=0A=
+        }=0A=
+        .email-container {=0A=
+            max-width: 600px; /* Adjust this value as needed */=0A=
+            margin: 0 auto; /* Center the container */=0A=
+            padding: 10px; /* Optional padding */=0A=
+        }=0A=
+        .purple-banner {=0A=
+            background-color: #4F185A;=0A=
+            color: white;=0A=
+            text-align: center;=0A=
+            padding: 40px;=0A=
+            position: fixed;=0A=
+            bottom: 0;=0A=
+            width: 100%;=0A=
+        }=0A=
+        .banner-container {=0A=
+            max-width: 600px; /* Same width as the image */=0A=
+            margin: 0 auto; /* Center the container */=0A=
+        }=0A=
+    </style></p>
+<div class=3D"email-container">
+<table>
+<tbody>
+<tr>
+<td class=3D"outer-column"></td>
+<td class=3D"middle-column">
+<div class=3D"banner-container">
+<p class=3D"left-aligned-text"></p>
+<p><br>
+Hello,</p>
+<br>
+<span style=3D"white-space: pre-wrap;"><b>This is a reminder that your time=
+card for last week needs to be submitted.</b></span>
+<p></p>
+<p><b><span class=3D"highlight" ;=3D"" white-space:=3D"" pre-wrap;?=3D"">As=
+signment Number: W01304686-001</span><br>
+<br>
+<b>Action items:</b> </b></p>
+<ul>
+<li><span style=3D"white-space: pre-wrap;">If you worked last week, please =
+submit your timecard as soon as possible so that your payroll may process o=
+n time.</span></li><li><span style=3D"white-space: pre-wrap;">If you are no=
+ longer on assignment, please reply to this e-mail and include your last da=
+y worked.</span>
+</li><li><span style=3D"white-space: pre-wrap;">If you are currently on ass=
+ignment but did not work last week, please submit &quot;Did Not Work&quot; =
+in Peoplenet (image below).
+<br>
+<img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/=
+2eae2308-b806-4bf8-b04a-a8f55cc19e9b/HF-2000073/pnet%20did%20not%20work.png=
+">
+</span></li></ul>
+<p><span style=3D"white-space: pre-wrap;"><br>
+If you have any questions or concerns, please contact us at LHHUSRSAssociat=
+ecare@lhh.com and one of our Specialists will be happy to help.<br>
+</span><span style=3D"white-space: pre-wrap;"></span><span style=3D"white-s=
+pace: pre-wrap;"><br>
+Thank you, <br>
+<span class=3D"highlight" ;=3D"" white-space:=3D"" pre-wrap;?=3D""><br>
+LHH Associate Care Support Team</span></p>
+<br>
+<div style=3D"text-align: center;" <a=3D"" href=3D"https://www.lhh.com/us/e=
+n/insights/lhhapp/">
+<img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/=
+2eae2308-b806-4bf8-b04a-a8f55cc19e9b/HF-2000073/LHH%20Candidate%20App.jfif"=
+>
+</div>
+</span></div>
+</td>
+<td class=3D"outer-column"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"banner-container">
+<div class=3D"purple-banner"></div>
+</div>
+<p></p>
+</body>
+</html>
+
+--_000_AS8PR06MB8213AF335D02CC2BFA3FF52EF628AAS8PR06MB8213eurp_--
