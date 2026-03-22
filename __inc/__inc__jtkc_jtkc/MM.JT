@@ -1,0 +1,28 @@
+
+
+#Persistent
+#NoTrayIcon
+SetKeyDelay, 33
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+
+
+
+
+SetTimer, MoveMouse
+MoveMouse:
+If ( A_TimeIdle > 177999 ) {
+MouseMove, 1 , 1,, R
+Click, 333, 22
+Sleep, 22
+}
+Return
+
+
+
+^0::
+Sleep, 33
+Reload
+Sleep, 33
+Return
+
